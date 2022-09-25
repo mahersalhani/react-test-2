@@ -39,7 +39,7 @@ export default function SignUp() {
     const firstName = data.get("firstName");
     const lastName = data.get("lastName");
 
-    const res = await fetch(`http://vcap.me/api/sing-up`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/sing-up`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
